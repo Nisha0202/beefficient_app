@@ -24,8 +24,8 @@
         android:id="@+id/note"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tap to rename Task"
-        android:textSize="12sp"
+        android:text="Tap to rename task"
+        android:textSize="16sp"
         android:textColor="#898989"
         android:layout_below="@id/title"
         android:layout_centerHorizontal="true"
@@ -48,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingVertical="12dp"
+            android:paddingVertical="20dp"
             android:gravity="center_vertical">
 
             <TextView
@@ -60,8 +60,9 @@
                 android:textColor="#000000" />
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="8dp"
                 android:layout_gravity="end"
                 android:src="@drawable/ic_today"
                 android:contentDescription="Today Icon" />
@@ -78,7 +79,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingVertical="12dp"
+            android:paddingVertical="20dp"
             android:gravity="center_vertical">
 
             <TextView
@@ -90,9 +91,10 @@
                 android:textColor="#000000" />
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
                 android:layout_gravity="end"
+                android:layout_marginEnd="8dp"
                 android:src="@drawable/ic_timer"
                 android:contentDescription="Timer Icon" />
         </LinearLayout>
@@ -108,7 +110,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingVertical="12dp"
+            android:paddingVertical="20dp"
             android:gravity="center_vertical">
 
             <TextView
@@ -137,7 +139,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingVertical="12dp"
+            android:paddingVertical="20dp"
             android:gravity="center_vertical">
 
             <TextView
@@ -149,9 +151,10 @@
                 android:textColor="#000000" />
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
                 android:layout_gravity="end"
+                android:layout_marginEnd="8dp"
                 android:src="@drawable/ic_no_tags"
                 android:contentDescription="No Tags Icon" />
         </LinearLayout>
