@@ -21,6 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- CreateTaskActivity -->
+        <activity android:name=".CreateTaskActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
