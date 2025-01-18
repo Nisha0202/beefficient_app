@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="18dp"
+    android:background="#FDF5BE">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BeeEfficient"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/usernameEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginVertical="180dp"
+        />
+
+    <!-- Username Input -->
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:hint="Username"
+        android:textColor="#3d3d3d"
+        android:textColorHint="#808080"
+        android:inputType="text"
+        android:background="@drawable/rounded_background"
+        android:paddingVertical="6dp"
+        android:paddingHorizontal="18dp"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="44dp" />
+
+    <!-- Password Input -->
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:hint="Password"
+        android:textColor="#3d3d3d"
+        android:textColorHint="#808080"
+        android:inputType="textPassword"
+        android:background="@drawable/rounded_background"
+        android:paddingVertical="6dp"
+        android:paddingHorizontal="18dp"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/usernameEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+       />
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:text="Login"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/passwordEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#232323"
+        android:paddingVertical="8dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
