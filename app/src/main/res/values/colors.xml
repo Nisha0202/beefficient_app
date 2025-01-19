@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="switch_thumb_color">#4CAF50</color> <!-- Green for the thumb -->
+    <color name="switch_track_color">#A5D6A7</color> <!-- Light green for the track -->
 </resources>

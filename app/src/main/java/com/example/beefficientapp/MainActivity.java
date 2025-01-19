@@ -3,6 +3,7 @@ package com.example.beefficientapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.widget.Button;
@@ -51,5 +52,6 @@ public class MainActivity extends AppCompatActivity {
         // Get the TextView for today's day and set it to bold
         TextView todayTextView = findViewById(dayIds[todayIndex]);
         todayTextView.setTypeface(todayTextView.getTypeface(), Typeface.BOLD);
+        todayTextView.setTextColor(Color.parseColor("#232323"));
     }
 }
