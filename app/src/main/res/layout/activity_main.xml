@@ -7,7 +7,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#FDF5BE">
+    android:background="#FDF5BE"
+    android:fontFamily="@font/ubantureg">
 
     <!-- Title -->
     <TextView
@@ -18,8 +19,9 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="#000000"
+        android:fontFamily="@font/ubantureg"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp" />
+        android:layout_marginTop="40dp" />
 
     <!-- Days of the week -->
     <LinearLayout
@@ -34,6 +36,7 @@
         android:textStyle="bold">
 
         <TextView
+            android:id="@+id/day_sun"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sun"
@@ -42,6 +45,7 @@
             android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/day_mon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Mon"
@@ -50,6 +54,7 @@
             android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/day_tue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tue"
@@ -58,6 +63,7 @@
             android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/day_wed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Wed"
@@ -66,6 +72,7 @@
             android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/day_thu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Thu"
@@ -74,6 +81,7 @@
             android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/day_fri"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Fri"
@@ -82,12 +90,14 @@
             android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/day_sat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sat"
             android:padding="12dp"
             android:textColor="#000000"
             android:textSize="16sp" />
+
 
     </LinearLayout>
 
@@ -96,6 +106,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="20dp"
+        android:fontFamily="@font/ubantureg"
         android:layout_below="@id/days_of_week"
         android:layout_marginTop="18dp"
         android:layout_marginBottom="100dp"
@@ -116,7 +127,8 @@
                 android:text="Task Area"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:paddingBottom="8dp" />
+                android:paddingBottom="8dp"
+                android:fontFamily="@font/ubantureg"/>
 
             <!-- Example tasks -->
             <TextView

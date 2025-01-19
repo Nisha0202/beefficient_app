@@ -13,8 +13,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="BeeEfficient"
-        android:textSize="32sp"
+        android:textSize="28sp"
         android:textStyle="bold"
+        android:fontFamily="@font/ubantureg"
         android:textColor="@android:color/black"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/usernameEditText"
@@ -35,7 +36,7 @@
         android:background="@drawable/rounded_background"
         android:paddingVertical="6dp"
         android:paddingHorizontal="18dp"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/titleTextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +54,7 @@
         android:background="@drawable/rounded_background"
         android:paddingVertical="6dp"
         android:paddingHorizontal="18dp"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/usernameEditText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,6 +74,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:backgroundTint="#232323"
+        android:fontFamily="@font/ubantureg"
         android:paddingVertical="8dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

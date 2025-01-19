@@ -50,6 +50,8 @@ public class LoginActivity extends AppCompatActivity {
                     // Save login state
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putBoolean("isLoggedIn", true);
+                    // Add the username to SharedPreferences
+                    editor.putString("username", USERNAME);
                     editor.apply();
 
                     // Navigate to MainActivity
