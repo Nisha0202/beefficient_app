@@ -270,9 +270,26 @@
 
     </LinearLayout>
 
+<LinearLayout
+    android:id="@+id/noDataImageView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="40dp"
+    android:background="@drawable/rounded_background"
+    android:layout_below="@id/days_of_week"
+    android:visibility="gone" >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/bee_sleeping"
+        />
+</LinearLayout>
+
 
     <!-- Task area -->
     <ScrollView
+        android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="20dp"
@@ -282,19 +299,6 @@
         android:layout_marginBottom="140dp"
         android:background="@drawable/rounded_background">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Today's Task"
-                android:fontFamily="@font/ubantureg"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
-
             <LinearLayout
                 android:id="@+id/taskContainer"
                 android:layout_width="match_parent"
@@ -302,7 +306,8 @@
                 android:orientation="vertical"
                 android:textColor="@android:color/black"
                 android:background="@android:color/white">
-            </LinearLayout>
+
+
         </LinearLayout>
 
     </ScrollView>

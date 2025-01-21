@@ -11,8 +11,6 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "ToDoApp.db";
     private static final int DATABASE_VERSION = 1;
@@ -66,32 +64,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             db.close();
         }
     }
-    public List<Task> getAllTasks() {
-        List<Task> taskList = new ArrayList<>();
+
+    @SuppressLint("Range")
+    public List<Task> getTasksByDate(String date) {
+        List<Task> tasks = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
-
-        Cursor cursor = db.query(TABLE_NAME, null, null, null, null, null, null);
-
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE " + COL_DATE + " = ?", new String[]{date});
         if (cursor.moveToFirst()) {
             do {
-                @SuppressLint("Range") String taskName = cursor.getString(cursor.getColumnIndex(COL_TASK_NAME));
-                @SuppressLint("Range") String date = cursor.getString(cursor.getColumnIndex(COL_DATE));
-                @SuppressLint("Range") String time = cursor.getString(cursor.getColumnIndex(COL_TIME));
-                @SuppressLint("Range") String tags = cursor.getString(cursor.getColumnIndex(COL_TAGS));
-
-                // Create Task object
-                Task task = new Task(taskName, date, time, tags);
-                taskList.add(task);
+                Task task = new Task();
+                task.setTaskName(cursor.getString(cursor.getColumnIndex(COL_TASK_NAME)));
+                task.setDate(cursor.getString(cursor.getColumnIndex(COL_DATE)));
+                task.setTime(cursor.getString(cursor.getColumnIndex(COL_TIME)));
+                task.setTags(cursor.getString(cursor.getColumnIndex(COL_TAGS)));
+                tasks.add(task);
             } while (cursor.moveToNext());
         }
-
         cursor.close();
         db.close();
-        return taskList;
+        return tasks;
     }
-
-
-
-
 }
-

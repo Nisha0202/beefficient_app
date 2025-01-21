@@ -1,12 +1,17 @@
 package com.example.beefficientapp;
 
+
 public class Task {
     private String taskName;
     private String date;
     private String time;
     private String tags;
 
-    // Constructor
+    // No-argument constructor
+    public Task() {
+    }
+
+    // Constructor with parameters
     public Task(String taskName, String date, String time, String tags) {
         this.taskName = taskName;
         this.date = date;

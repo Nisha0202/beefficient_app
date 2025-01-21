@@ -183,7 +183,7 @@ public class CreateTaskActivity extends AppCompatActivity {
 
         // Retrieve data
         String username = preferences.getString("username", "User");
-        String date = preferences.getString("selected_date", "23/01/2025");
+        String date = preferences.getString("selected_date", "22/1/2025");
         String time = preferences.getString("selectedTime", "10.30");
         String taskName = preferences.getString("taskname", "New Task");
         boolean alarmStatus = preferences.getBoolean("notificationToggle", false);
@@ -196,19 +196,19 @@ public class CreateTaskActivity extends AppCompatActivity {
         boolean success = dbHelper.insertData(username, date, time, taskName, alarmStatus, tags);
         if (success) {
             // Show success message
-            Toast.makeText(context, "Data migrated to SQLite successfully!", Toast.LENGTH_LONG).show();
+            Toast.makeText(context, "Task created successfully!", Toast.LENGTH_LONG).show();
 
             // Clear all SharedPreferences except username
             SharedPreferences.Editor editor = preferences.edit();
             Map<String, ?> allEntries = preferences.getAll();
             for (Map.Entry<String, ?> entry : allEntries.entrySet()) {
-                if (!entry.getKey().equals("username")) {
+                if (!entry.getKey().equals("username") && !entry.getKey().equals("isLoggedIn")) {
                     editor.remove(entry.getKey());
                 }
             }
             editor.apply(); // Apply changes
         } else {
-            Toast.makeText(context, "Data migration failed.", Toast.LENGTH_LONG).show();
+            Toast.makeText(context, "Task creation failed.", Toast.LENGTH_LONG).show();
         }
     }
 
