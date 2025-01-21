@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreatedTags"
+    android:background="#FDF5BE">
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/back"
+        android:layout_marginStart="16dp"
+        android:contentDescription="Navigate back"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="22dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Title -->
+
+    <TextView
+        android:id="@+id/titleTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose a Tag"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:fontFamily="@font/ubantureg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="160dp"
+        android:layout_marginBottom="40dp"/>
+
+
+
+    <!-- Menu -->
+    <LinearLayout
+        android:id="@+id/menu_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleTag"
+        android:layout_marginTop="18dp"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_background">
+
+        <!-- Today Menu Item -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="0dp"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/newTag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="New Tag"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:background="@android:color/transparent"
+                android:autofillHints="Exams"
+                android:imeOptions="actionDone"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/addNewTagButton"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:backgroundTint="@android:color/transparent"
+                android:padding="8dp" />
+        </LinearLayout>
+
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#898989" />
+
+        <!-- Timer Menu Item -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="20dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/classesTag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Classes"
+                android:textSize="16sp"
+                android:textColor="#000000" />
+
+
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#898989" />
+
+        <!-- Notification Menu Item with Toggle -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="20dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/exerciseTag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Exercise"
+                android:textSize="16sp"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#898989" />
+
+        <!-- No Tags Menu Item -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="20dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/skincareTag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Skin Care"
+                android:textSize="16sp"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

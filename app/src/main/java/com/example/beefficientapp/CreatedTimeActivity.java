@@ -42,6 +42,8 @@ public class CreatedTimeActivity extends AppCompatActivity {
             // Close the activity
             finish();
         });
+
+
     }
 
     private void saveSelectedTime(String time) {

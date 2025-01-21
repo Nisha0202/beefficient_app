@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#F0A709" /> <!-- Orange color -->
+    <corners android:radius="5.5dp" /> <!-- Half of 11dp for a perfect circle -->
+    <size android:width="11dp" android:height="11dp" /> <!-- Set the size to 11dp x 11dp -->
+</shape>

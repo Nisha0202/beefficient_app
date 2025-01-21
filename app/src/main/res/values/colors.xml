@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="switch_thumb_color">#4CAF50</color> <!-- Green for the thumb -->
-    <color name="switch_track_color">#A5D6A7</color> <!-- Light green for the track -->
+    <color name="switch_track_color" android:state_checked="true" >#2E7D32</color> <!-- Light green for the track -->
 </resources>

@@ -2,16 +2,20 @@ package com.example.beefficientapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Locale;
+import java.util.List;
+
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Highlight today's day
         highlightToday();
+        loadTasks(this);
     }
 
     private void highlightToday() {
@@ -54,4 +59,36 @@ public class MainActivity extends AppCompatActivity {
         todayTextView.setTypeface(todayTextView.getTypeface(), Typeface.BOLD);
         todayTextView.setTextColor(Color.parseColor("#232323"));
     }
+
+    private void loadTasks(Context context) {
+        DatabaseHelper dbHelper = new DatabaseHelper(context);
+
+        // Fetch data from SQLite
+        List<Task> tasks = dbHelper.getAllTasks(); // Assumes you have a method in DatabaseHelper
+        LinearLayout taskContainer = findViewById(R.id.taskContainer);
+
+        // Clear previous views
+        taskContainer.removeAllViews();
+
+        // Populate the layout dynamically
+        for (Task task : tasks) {
+            // Create a View for each task
+            View taskView = getLayoutInflater().inflate(R.layout.task_item, null);
+
+            TextView taskName = taskView.findViewById(R.id.taskName);
+            TextView taskDate = taskView.findViewById(R.id.taskDate);
+            TextView taskTime = taskView.findViewById(R.id.taskTime);
+            TextView taskTags = taskView.findViewById(R.id.taskTags);
+
+            // Set task data
+            taskName.setText(task.getTaskName());
+            taskDate.setText(task.getDate());
+            taskTime.setText(task.getTime());
+            taskTags.setText(task.getTags());
+
+            // Add to container
+            taskContainer.addView(taskView);
+        }
+    }
+
 }
