@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
         highlightToday();
         loadTasksForToday();
 
-        // Set up day click listeners
-        setupDayClickListeners();
+//        // Set up day click listeners
+//        setupDayClickListeners();
     }
 
     private void highlightToday() {
@@ -164,25 +164,25 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void setupDayClickListeners() {
-        int[] dayIds = {
-                R.id.day_sun,
-                R.id.day_mon,
-                R.id.day_tue,
-                R.id.day_wed,
-                R.id.day_thu,
-                R.id.day_fri,
-                R.id.day_sat
-        };
-
-        for (int i = 0; i < dayIds.length; i++) {
-            final int index = i;
-            findViewById(dayIds[i]).setOnClickListener(v -> {
-                Calendar calendar = Calendar.getInstance();
-                calendar.set(Calendar.DAY_OF_WEEK, index + 1);
-                String selectedDate = new SimpleDateFormat("d-M-yyyy", Locale.getDefault()).format(calendar.getTime());
-                loadTasksByDate(MainActivity.this, selectedDate);
-            });
-        }
-    }
+//    private void setupDayClickListeners() {
+//        int[] dayIds = {
+//                R.id.day_sun,
+//                R.id.day_mon,
+//                R.id.day_tue,
+//                R.id.day_wed,
+//                R.id.day_thu,
+//                R.id.day_fri,
+//                R.id.day_sat
+//        };
+//
+//        for (int i = 0; i < dayIds.length; i++) {
+//            final int index = i;
+//            findViewById(dayIds[i]).setOnClickListener(v -> {
+//                Calendar calendar = Calendar.getInstance();
+//                calendar.set(Calendar.DAY_OF_WEEK, index + 1);
+//                String selectedDate = new SimpleDateFormat("d-M-yyyy", Locale.getDefault()).format(calendar.getTime());
+//                loadTasksByDate(MainActivity.this, selectedDate);
+//            });
+//        }
+//    }
 }
